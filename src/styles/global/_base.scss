@@ -50,18 +50,19 @@ a {
 }
 
 #background { // scss-lint:disable IdSelector
-  background: $main-background;
+  background: #2d4899;
   bottom: 0;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 0;
-
+/*
   @include hidpi {
     background-image: $main-background-retina;
     background-size: image-width($main-background-image-retina)/2 image-height($main-background-image-retina)/2;
   }
+  */
 }
 
 .help-block {

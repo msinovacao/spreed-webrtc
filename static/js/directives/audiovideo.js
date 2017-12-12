@@ -46,7 +46,7 @@ define(['jquery', 'underscore', 'text!partials/audiovideo.html', 'text!partials/
 
 			$scope.peersTalking = {};
 
-			$scope.rendererName = $scope.defaultRendererName = "democrazy";
+			$scope.rendererName = $scope.defaultRendererName = "onepeople";
 
 			//console.log("audiovideo", localVideo, miniVideo);
 
