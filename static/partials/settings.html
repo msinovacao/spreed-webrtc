@@ -10,7 +10,6 @@
     </div>
   </nav>
 <div class="settings nicescroll">
-  <div class="version">{{version}}</div>
   <div ng-form="settingsform" class="form-horizontal" on-enter="saveSettings(user)" on-escape="cancelSettings()"
     <fieldset>
 
@@ -100,21 +99,6 @@
         </div>
       </settings-media>
       <settings-settings>
-        <legend>{{_('General')}}</legend>
-        <div class="form-group">
-          <label class="col-xs-4 control-label">{{_('Language')}}</label>
-          <div class="col-xs-8">
-            <select class="form-control" ng-model="user.settings.language" ng-options="l.code as l.name for l in availableLanguages | orderBy:'code'"></select>
-            <span class="help-block">{{_('Language changes become active on reload.')}}</span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-xs-4 control-label">{{_('Default room')}}</label>
-          <div class="col-xs-8">
-            <input type="text" class="form-control" ng-model="user.settings.defaultRoom" placeholder="{{_('Main')}}" />
-            <span class="help-block">{{_('Set alternative room to join at start.')}}</span>
-          </div>
-        </div>
         <legend>{{_('Notifications')}}</legend>
         <div class="form-group" ng-show="desktopNotify.supported">
           <label class="col-xs-4 control-label">{{_('Desktop notification')}}</label>
