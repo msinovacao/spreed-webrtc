@@ -23,7 +23,7 @@
 define(["jquery", "angular", "underscore"], function($, angular, _) {
 
 	// AppController
-	return ["$scope", "$window", "appData", "userSettingsData", "$timeout", function($scope, $window, appData, userSettingsData, $timeout) {
+	return ["$scope", "$window", "appData", "userSettingsData", "$timeout", "$location", function($scope, $window, appData, userSettingsData, $timeout, $location) {
 
 		// Disable drag and drop.
 		$($window).on("dragover dragenter drop", function(event) {
@@ -36,9 +36,9 @@ define(["jquery", "angular", "underscore"], function($, angular, _) {
 		$scope.authorizing = false;
 		$scope.roomsHistory = [];
 		$scope.defaults = {
-			displayName: null,
+			displayName: $location.search().studentName,
 			buddyPicture: null,
-			message: null,
+			message: 'Disponível',
 			settings: {
 				videoQuality: "high",
 				sendStereo: false,
@@ -88,10 +88,9 @@ define(["jquery", "angular", "underscore"], function($, angular, _) {
 				$scope.update($scope.user);
 				$scope.loadedUser = storedUser.displayName && true;
 			} else {
-				$scope.loadedUser = false;
+			    userSettingsData.save($scope.user);
 			}
 			$scope.roomsHistory = [];
-			appData.e.triggerHandler("userSettingsLoaded", [$scope.loadedUser, $scope.user]);
 			$scope.reset();
 		};
 
