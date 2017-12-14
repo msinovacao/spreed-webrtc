@@ -1,0 +1,62 @@
+.bar{
+    background-color: #2c3e78;
+}
+
+.bar .middle > span {
+    background-color: #2c3e78;
+    color: #fff;
+}
+
+.bar .right .btn{
+    background-color: #314c8d;
+    color: #fff;
+    border-color: transparent !important;
+}
+
+.bar .right .btn.active{
+    background-color: transparent;
+    color: #fbfbfb !important;
+}
+
+.bar .right .btn:hover{
+    background-color: transparent;
+    color: #fbfbfb !important;
+}
+
+.buddy .buddyPicture {
+    background: #84b819;
+    border-radius: 2px;
+    float: left;
+    height: 46px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 46px;
+    line-height: 44px;
+}
+
+.file-info > div{
+    position: unset !important;
+    z-index: 3;
+    margin: 0 0 0 0;
+}
+
+.file-info .actions{
+    left: 70%;
+    margin-left: 10px;
+    position: absolute;
+    text-align: left;
+    top: 14px;
+}
+
+.file-info-size > div{
+    bottom: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    left: 0;
+    position: unset;
+    top: 0;
+    width: 0;
+    z-index: 0;
+}
