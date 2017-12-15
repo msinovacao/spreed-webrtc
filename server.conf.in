@@ -44,7 +44,7 @@ listen = 127.0.0.1:8080
 ; space. If you do not have one use a public one like stun.spreed.me:443. If
 ; you have a TURN server you do not need to set an STUN server as the TURN
 ; server will provide STUN services.
-;stunURIs = stun:stun.l.google.com:19302 stun:stun1.l.google.com:19302 stun:stun2.l.google.com:19302 stun:stun3.l.google.com:19302 stun:stun4.l.google.com:19302
+;stunURIs = stun:stun.spreed.me:443
 ; TURN server URIs in format host:port?transport=udp|tcp. You can provide
 ; multiple seperated by space. If you do not have at least one TURN server then
 ; some users will not be able to use the server as the peer to peer connection
