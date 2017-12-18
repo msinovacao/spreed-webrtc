@@ -30,7 +30,8 @@ define(["jquery", "angular", "underscore"], function($, angular, _) {
 			event.preventDefault();
 		});
 
-		appData.set($scope);
+        window.localStorage.clear();
+        appData.set($scope);
 
 		// User related scope data.
 		$scope.authorizing = false;
