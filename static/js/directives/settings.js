@@ -157,7 +157,7 @@ define(['jquery', 'underscore', 'text!partials/settings.html'], function($, _, t
 				if ($scope.autoshowSettings && mediaStream.connector.connected && !appData.authorizing()) {
 					$scope.autoshowSettings = false;
 					if (!$scope.loadedUser) {
-						$scope.layout.settings = true;
+						//$scope.layout.settings = true;
 					}
 				}
 			};
