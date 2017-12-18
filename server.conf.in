@@ -35,7 +35,7 @@ listen = 127.0.0.1:8080
 
 [app]
 ; HTML page title
-title = Tutor onLine
+title = Portal inFlux - Tutor Online
 ; Version string to use for static resources. This defaults to the server
 ; version and should only be changed when you use your own way to invalidate
 ; long cached static resources.
