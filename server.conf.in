@@ -45,13 +45,14 @@ title = Portal inFlux - Tutor Online
 ; you have a TURN server you do not need to set an STUN server as the TURN
 ; server will provide STUN services.
 ; stunURIs = stun:stun1.l.google.com:19302 stun:stun2.l.google.com:19302 stun:stun3.l.google.com:19302 stun:stun4.l.google.com:19302
+stunURIs = stun:turn.appear.in:443
 ; TURN server URIs in format host:port?transport=udp|tcp. You can provide
 ; multiple seperated by space. If you do not have at least one TURN server then
 ; some users will not be able to use the server as the peer to peer connection
 ; cannot be established without a TURN server due to firewall reasons. An open
 ; source TURN server which is fully supported can be found at
 ; https://code.google.com/p/rfc5766-turn-server/.
-turnURIs = turn:turn01.hubl.in?transport=udp turn:turn02.hubl.in?transport=tcp
+;turnURIs = turn:turnserver:port?transport=udp
 ; Shared secret authentication for TURN user generation if the TURN server is
 ; protected (which it should be).
 ; See http://tools.ietf.org/html/draft-uberti-behave-turn-rest-00 for details.
