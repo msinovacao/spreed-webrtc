@@ -44,7 +44,7 @@ title = Portal inFlux - Tutor Online
 ; space. If you do not have one use a public one like stun.spreed.me:443. If
 ; you have a TURN server you do not need to set an STUN server as the TURN
 ; server will provide STUN services.
-; stunURIs = stun:stun1.l.google.com:19302 stun:stun2.l.google.com:19302 stun:stun3.l.google.com:19302 stun:stun4.l.google.com:19302
+stunURIs = stun:stun1.l.google.com:19302 stun:stun2.l.google.com:19302 stun:stun3.l.google.com:19302 stun:stun4.l.google.com:19302
 : stunURIs = stun:turn.appear.in:443
 ; TURN server URIs in format host:port?transport=udp|tcp. You can provide
 ; multiple seperated by space. If you do not have at least one TURN server then
@@ -142,7 +142,7 @@ serverRealm = local
 ;contacts = true
 
 [log]
-;logfile = /var/log/spreed-webrtc-server.log
+logfile = /var/log/spreed-webrtc-server.log
 
 [users]
 ; Set to true to enable user functionality.
