@@ -45,19 +45,20 @@ title = Portal inFlux - Tutor Online
 ; you have a TURN server you do not need to set an STUN server as the TURN
 ; server will provide STUN services.
 ; stunURIs = stun:stun1.l.google.com:19302 stun:stun2.l.google.com:19302 stun:stun3.l.google.com:19302 stun:stun4.l.google.com:19302
-stunURIs = stun:turn.appear.in:443
+: stunURIs = stun:turn.appear.in:443
 ; TURN server URIs in format host:port?transport=udp|tcp. You can provide
 ; multiple seperated by space. If you do not have at least one TURN server then
 ; some users will not be able to use the server as the peer to peer connection
 ; cannot be established without a TURN server due to firewall reasons. An open
 ; source TURN server which is fully supported can be found at
 ; https://code.google.com/p/rfc5766-turn-server/.
-;turnURIs = turn:turnserver:port?transport=udp
+turnURIs = turn:52.67.59.156:3478?transport=tcp turn:52.67.59.156:3478?transport=udp turn:52.67.170.141:80?transport=tcp turn:52.67.170.141:80?transport=udp
+; turnURIs = turn:52.67.170.141:80?transport=tcp
 ; Shared secret authentication for TURN user generation if the TURN server is
 ; protected (which it should be).
 ; See http://tools.ietf.org/html/draft-uberti-behave-turn-rest-00 for details.
 ; A supported TURN server is https://code.google.com/p/rfc5766-turn-server/.
-;turnSecret = the-default-turn-shared-secret-do-not-keep
+turnSecret = msauto
 ; Enable renegotiation support. Set to true to tell clients that they can
 ; renegotiate peer connections when required. Firefox support is not complete,
 ; so do not enable if you want compatibility with Firefox clients.
@@ -142,7 +143,7 @@ serverRealm = local
 ;contacts = true
 
 [log]
-;logfile = /var/log/spreed-webrtc-server.log
+logfile = /var/log/spreed-webrtc-server.log
 
 [users]
 ; Set to true to enable user functionality.
