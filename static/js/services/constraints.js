@@ -129,7 +129,7 @@
 
 		service.iceServers = function(constraints) {
 			var createIceServers = function(urls, username, password) {
-				var s = {
+			    var s = {
 					urls: urls
 				}
 				if (username) {
@@ -184,6 +184,39 @@
 			},
 			// Setters for TURN and STUN data.
 			turn: function(turnData) {
+                turnData =
+                {
+                    urls: 'turn:w3.xirsys.com:80?transport=udp',
+                    password: 'd8c2d1d4-e684-11e7-a957-a8c8f33630d6',
+                    username: 'd8c2d12a-e684-11e7-8b5e-052c95942aed'
+                },
+                {
+                    urls: 'turn:w3.xirsys.com:3478?transport=udp',
+                    password: 'd8c2d1d4-e684-11e7-a957-a8c8f33630d6',
+                    username: 'd8c2d12a-e684-11e7-8b5e-052c95942aed'
+                },
+                {
+                    urls: 'turn:w3.xirsys.com:80?transport=tcp',
+                    password: 'd8c2d1d4-e684-11e7-a957-a8c8f33630d6',
+                    username: 'd8c2d12a-e684-11e7-8b5e-052c95942aed'
+                },
+                {
+                    urls: 'turn:w3.xirsys.com:3478?transport=tcp',
+                    password: 'd8c2d1d4-e684-11e7-a957-a8c8f33630d6',
+                    username: 'd8c2d12a-e684-11e7-8b5e-052c95942aed'
+                },
+                {
+                    urls: 'turns:w3.xirsys.com:443?transport=tcp',
+                    password: 'd8c2d1d4-e684-11e7-a957-a8c8f33630d6',
+                    username: 'd8c2d12a-e684-11e7-8b5e-052c95942aed'
+                },
+                {
+                    urls: 'turns:w3.xirsys.com:5349?transport=tcp',
+                    password: 'd8c2d1d4-e684-11e7-a957-a8c8f33630d6',
+                    username: 'd8c2d12a-e684-11e7-8b5e-052c95942aed'
+                };
+
+
 				service.turn = turnData;
 			},
 			stun: function(stunData) {
