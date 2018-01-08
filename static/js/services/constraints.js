@@ -138,13 +138,21 @@
 				}
 				return s;
 			};
-			var iceServers = [];
-			if (service.stun && service.stun.length) {
-				iceServers.push(createIceServers(service.stun));
-			}
-			if (service.turn && service.turn.urls && service.turn.urls.length) {
-				iceServers.push(createIceServers(service.turn.urls, service.turn.username, service.turn.password));
-			}
+
+
+
+
+            var iceServers = [];
+
+            for (var i = 0; i < service.turn.length; i++) {
+                iceServers.push(createIceServers(service.turn[i].urls, service.turn[i].username, service.turn[i].password));
+            }
+
+            //window.consoleBackup.log(iceServers);
+
+			//if (service.turn && service.turn.urls && service.turn.urls.length) {
+				//iceServers.push(createIceServers(service.turn.urls, service.turn.username, service.turn.password));
+			//}
 			webrtc.settings.pcConfig.iceServers = iceServers;
 		};
 
